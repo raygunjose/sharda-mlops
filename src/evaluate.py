@@ -4,7 +4,7 @@ import json
 from sklearn.metrics import accuracy_score
 
 df = pd.read_csv("data/processed/students_processed.csv")
-X = df[["study_hours"],["attendance"]]
+X = df[["study_hours", "attendance"]]
 y = df["pass"]
 
 model = joblib.load("models/model.pkl")

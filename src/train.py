@@ -16,7 +16,7 @@ random_state = params["train"]["random_state"]
 #Load data
 df = pd.read_csv("data/processed/students_processed.csv")
 
-X = df[["study_hours"], ["attendance"]]
+X = df[["study_hours", "attendance"]]
 y = df["pass"]
 
 X_train, X_test, y_train, y_test = train_test_split(
